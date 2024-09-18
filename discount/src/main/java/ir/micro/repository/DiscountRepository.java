@@ -1,9 +1,11 @@
-package repository;
+package ir.micro.repository;
 
-import entity.Discount;
+import ir.micro.entity.Discount;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DiscountRepository extends JpaRepository<Discount, Long> {
+
+    Discount findDiscountByCouponName(String name);
 }
